@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="94f7a038-1f3d-4f2f-905d-5fb4060d142e" created="3.42.1" activeEnvironment="Default environment" name="REST API PROJECT-2" projectVersion="" updated="3.42.1 2022-11-28T12:27:35Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="8ec0c5ee-4672-405c-a7d6-eb15c608e54a" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://httpbin.org" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://httpbin.org</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Json" path="/json" id="3b235877-712a-45a0-a95e-309e938acdee">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Json" id="02aeb343-7738-4307-b55c-c2fc137a1c25" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:json="http://httpbin.org/json">json:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="1c4a1d69-00a9-4ee9-b09b-0af7c838d3a5" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://httpbin.org</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://httpbin.org/json</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Xml" path="/xml" id="46946461-a058-4328-b36b-3d8e25fb3490">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Xml" id="0a6edcaa-491c-4f5e-a04a-6729abb580b1" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>slideshow</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="ba53dcbc-57ea-408a-bde7-0892a3d601f4" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://httpbin.org</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="html" path="/html" id="ca823ec3-c8c6-46f2-84f0-dae775a7ba98">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="6fd677d4-e6cc-4ad3-a730-a30143a6980b" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="b30e31cc-e8be-4613-8177-8bdfdc660e5d" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://httpbin.org</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="0dd01bb2-08cc-4600-8d92-568864e19ed2" name="TEST SUITE">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="e2270f00-a0f1-4a2f-81b1-5de48b2b5cad" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TEST CASE" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="TEST STEP" id="eaade2cf-869b-4d6e-b5fc-eef1b0b21a7d">
+        <con:settings/>
+        <con:config service="http://httpbin.org" resourcePath="/json" methodName="Json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="TEST STEP" id="1c4a1d69-00a9-4ee9-b09b-0af7c838d3a5" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://httpbin.org</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://httpbin.org/json</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="XML TEST STEP" id="b2b8cffb-bf36-4a95-96b0-bca3d0651b9b">
+        <con:settings/>
+        <con:config service="http://httpbin.org" resourcePath="/xml" methodName="Xml" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="XML TEST STEP" id="ba53dcbc-57ea-408a-bde7-0892a3d601f4" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://httpbin.org</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://httpbin.org/xml</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="HTML TEST STEP" id="6af5fa84-6acf-46fa-b163-fbfe1cc5f190">
+        <con:settings/>
+        <con:config service="http://httpbin.org" resourcePath="/html" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="HTML TEST STEP" id="b30e31cc-e8be-4613-8177-8bdfdc660e5d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://httpbin.org</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://httpbin.org/html</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

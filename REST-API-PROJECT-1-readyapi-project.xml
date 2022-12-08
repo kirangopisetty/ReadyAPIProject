@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="00ab4bd5-e626-4e79-b532-5babe9cdb7e0" created="3.42.1" activeEnvironment="Default environment" name="REST API PROJECT-1" projectVersion="" updated="3.42.1 2022-11-28T12:27:35Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="825500cb-d5fa-4be5-b586-e84a4964c90d" wadlVersion="http://wadl.dev.java.net/2009/02" name="API REQUESTS" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://httpbin.orgg</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Html" path="/html" id="313b4a50-3580-4527-a4b0-88de9226175e">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Html" id="7f091c45-174e-4b38-bfbe-f2d4df24a25b" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="5d2f3ee9-e59b-48f1-99ba-b3f30b2f9993" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://httpbin.orgg</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Xml" path="/xml" id="34691872-d7e2-4ce6-b4ea-57a12cf295d0">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Xml" id="45bdc80e-8a79-4ad0-b5cd-e5cc9b003a5f" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>slideshow</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="0dde2f55-fcdc-4759-8e50-087f88683cab" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://httpbin.orgg</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Json" path="/json" id="01eefbe2-3c83-4f80-ab46-d6f5bba85ade">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Json" id="e9b6ef0d-968a-4696-b55d-d0c43e206666" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:json="http://httpbin.org/json">json:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="b94ceaf1-ffb2-45a9-82c6-91cfe9880109" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://httpbin.orgg</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Robots.txt" path="/robots.txt" id="62fd62a4-e537-472e-8be7-560b4606c0d1">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Robots.txt" id="13d217b6-e8a3-4d83-b16b-4962f5beaf12" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/plain</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="12607d11-acbc-4ae3-a759-3b9c2d5f9299" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://httpbin.orgg</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="aa152c28-c1f5-42c9-81b6-44c51ed64275" name="TEST SUITE">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="da29beb1-1eb5-4435-8bea-24edc2422844" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TEST CASES" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">true</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:testStep type="restrequest" name="HTML API REQUEST-TEST STEP" id="c05db7d7-64ac-4424-8327-34ccb553750e">
+        <con:settings/>
+        <con:config service="API REQUESTS" resourcePath="/html" methodName="Html" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="HTML API REQUEST-TEST STEP" id="5d2f3ee9-e59b-48f1-99ba-b3f30b2f9993" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://httpbin.orgg</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://httpbin.org/html</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="XML API REQUEST-TEST STEP" id="96f4c4c6-e331-4177-9ff8-0706842babd3">
+        <con:settings/>
+        <con:config service="API REQUESTS" resourcePath="/xml" methodName="Xml" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="XML API REQUEST-TEST STEP" id="0dde2f55-fcdc-4759-8e50-087f88683cab" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://httpbin.org</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://httpbin.org/xml</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="JSON API REQUEST-TEST STEP" id="be308bbd-642e-4b93-af94-524142d033a7">
+        <con:settings/>
+        <con:config service="API REQUESTS" resourcePath="/json" methodName="Json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="JSON API REQUEST-TEST STEP" id="b94ceaf1-ffb2-45a9-82c6-91cfe9880109" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://httpbin.orgg</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://httpbin.org/json</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="TEXT API REQUEST-TEST STEP" id="73081d14-4c26-48c9-a03c-160371aeb170">
+        <con:settings/>
+        <con:config service="API REQUESTS" resourcePath="/robots.txt" methodName="Robots.txt" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="TEXT API REQUEST-TEST STEP" id="12607d11-acbc-4ae3-a759-3b9c2d5f9299" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://httpbin.orgg</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://httpbin.org/robots.txt</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
