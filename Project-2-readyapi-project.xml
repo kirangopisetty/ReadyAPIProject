@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6cce3a79-33e6-4ff2-9cc4-5f3230984580" created="3.42.1" activeEnvironment="Default environment" name="Project 2" projectVersion="" updated="3.42.1 2022-11-28T12:27:35Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="4033e9ef-d66d-4b56-b3ab-98b2b5b7efc5" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://cgi-lib.berkeley.edu" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://cgi-lib.berkeley.edu</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Fup.cgi" path="/ex/fup.cgi" id="32d918da-ad66-4938-9bfa-35c83f170cee">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Fup.cgi" id="7caf15d6-4b68-4335-8c57-a202b5599299" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="f785999b-0fca-4aa2-bd64-be6598eefc64" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://cgi-lib.berkeley.edu</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="b1074db0-2361-486c-a817-aad49a261867" name="https://cgi-lib.berkeley.edu Test Suite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="727ecf11-8733-43f2-b759-1e5f3909dfb6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="https://cgi-lib.berkeley.edu Test Case 1" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="50be7d84-bb13-4e67-a2aa-757c01b04042">
+        <con:settings/>
+        <con:config service="https://cgi-lib.berkeley.edu" resourcePath="/ex/fup.cgi" methodName="Fup.cgi" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="f785999b-0fca-4aa2-bd64-be6598eefc64" mediaType="multipart/form-data" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment><con:entry key="Origin" value="https://cgi-lib.berkeley.edu" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Accept" value="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Connection" value="keep-alive" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Referer" value="https://cgi-lib.berkeley.edu/ex/fup.html" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.62" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Sec-Fetch-Dest" value="document" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Sec-Fetch-Site" value="same-origin" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Host" value="cgi-lib.berkeley.edu" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Accept-Encoding" value="gzip, deflate, br" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Sec-Fetch-Mode" value="navigate" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="sec-ch-ua" value="&quot;Microsoft Edge&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="sec-ch-ua-mobile" value="?0" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Cache-Control" value="max-age=0" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Upgrade-Insecure-Requests" value="1" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="sec-ch-ua-platform" value="&quot;Windows&quot;" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Sec-Fetch-User" value="?1" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Accept-Language" value="en-US,en;q=0.9" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Content-Length" value="345" xmlns:con="http://eviware.com/soapui/config"/><con:entry key="Content-Type" value="multipart/form-data; boundary=----WebKitFormBoundaryudBni6d4sI4uNyZs" xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></con:setting>
+            </con:settings>
+            <con:endpoint>https://cgi-lib.berkeley.edu</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://cgi-lib.berkeley.edu/ex/fup.cgi</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="914f655e-a0fd-4ca8-8719-2b4f2d3e3fd3" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
